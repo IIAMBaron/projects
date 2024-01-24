@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://pizzaLore/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://pizzaLore/">
+
+<xs:element name="addProduct" type="tns:addProduct"/>
+
+<xs:element name="addProductResponse" type="tns:addProductResponse"/>
+
+<xs:element name="address" type="tns:address"/>
+
+<xs:element name="addressResponse" type="tns:addressResponse"/>
+
+<xs:element name="homePage" type="tns:homePage"/>
+
+<xs:element name="homePageResponse" type="tns:homePageResponse"/>
+
+<xs:element name="login" type="tns:login"/>
+
+<xs:element name="loginResponse" type="tns:loginResponse"/>
+
+<xs:element name="orderDetails" type="tns:orderDetails"/>
+
+<xs:element name="orderDetailsResponse" type="tns:orderDetailsResponse"/>
+
+<xs:element name="orderInfo" type="tns:orderInfo"/>
+
+<xs:element name="orderInfoResponse" type="tns:orderInfoResponse"/>
+
+<xs:element name="prodTypes" type="tns:prodTypes"/>
+
+<xs:element name="prodTypesResponse" type="tns:prodTypesResponse"/>
+
+<xs:element name="products" type="tns:products"/>
+
+<xs:element name="productsResponse" type="tns:productsResponse"/>
+
+<xs:element name="sales" type="tns:sales"/>
+
+<xs:element name="salesResponse" type="tns:salesResponse"/>
+
+<xs:complexType name="orderDetails">
+<xs:sequence>
+<xs:element name="orderID" type="xs:int"/>
+<xs:element name="hashID" type="xs:anyType" minOccurs="0"/>
+<xs:element name="hashProdQuantity" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="orderDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="address">
+<xs:sequence>
+<xs:element name="table" type="xs:string" minOccurs="0"/>
+<xs:element name="streetNum" type="xs:string" minOccurs="0"/>
+<xs:element name="streetName" type="xs:string" minOccurs="0"/>
+<xs:element name="suburb" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addressResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prodTypes">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="prodTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProduct">
+<xs:sequence>
+<xs:element name="table" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+<xs:element name="desc" type="xs:string" minOccurs="0"/>
+<xs:element name="imageLoc" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="orderInfo">
+<xs:sequence>
+<xs:element name="table" type="xs:string" minOccurs="0"/>
+<xs:element name="orderDate" type="xs:string" minOccurs="0"/>
+<xs:element name="mode" type="xs:string" minOccurs="0"/>
+<xs:element name="pay" type="xs:int"/>
+<xs:element name="addressID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="orderInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="homePage">
+<xs:sequence>
+<xs:element name="prodType" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="homePageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sales">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="salesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="products">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="productsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,19 @@
+/* 
+    Created on : 21 Nov 2023, 19:00:23
+    Author     : Baron
+*/
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  height: 50%;
+  width: 100%;
+}
+.right {
+    float: right
+}
